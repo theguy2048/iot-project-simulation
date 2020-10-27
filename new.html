@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>IOT-project</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/57b4ff74b8.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body data-spy="scroll">
+    <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="205">
+        <div class="container-fluid">
+            <center id="nav-text">Contact-free Entry System and Crowd Control using Silent Laser Tripwire</center>
+        </div>
+    </nav>  
+
+    
+    <footer id="contact">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-1">
+                    
+                </div>
+                <div class="col-md-1">
+                    <p>Entry <br>Gate</p>
+                    <div id="entry-gate" onmouseover="addCount()"><span id="to-hide">+</span></div>                    
+                </div>
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    <h3 id="to-be-hide">Live Count of Customers</h3>
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="counter" onclick="resetCount()">
+                        <span id="count">0</span>
+                    </a>
+                    <div id="alert">Too many customers</div>
+                    <div class="gap" id="to-be-hide">
+                        <div id="store" id="to-be-hide">
+                            <p id="ppl" id="to-be-hide"></p>
+                        </div>
+                    </div>                
+                </div>  
+                <div class="col-md-1">
+                    <p>Exit <br>Gate</p>
+                    <div id="exit-gate" onmouseover="delCount()"><span id="to-hide">-</span></div>
+                </div>
+                <div class="col-md-1">
+                    
+                </div>
+            </div>
+        </div>
+    
+    </footer>
+
+    <!-- JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script> -->
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyD0htEQPsaT7dnELNnoDcf-hWpIIy6uKMk",
+          authDomain: "iot-fundamentals.firebaseapp.com",
+          databaseURL: "https://iot-fundamentals.firebaseio.com",
+          projectId: "iot-fundamentals",
+          storageBucket: "iot-fundamentals.appspot.com",
+          messagingSenderId: "202275763089",
+          appId: "1:202275763089:web:01de9f2daf95a05e696030",
+          measurementId: "G-RKL6N5RHTC"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        var rootRef = firebase.database().ref();
+      </script>
+      
+
+    <script  src="./script.js"></script>
+
+</body>
+
+</html>
